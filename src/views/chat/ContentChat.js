@@ -95,7 +95,11 @@ const ContentChat = (props) => {
                                 onChange={(e) => setText(e.target.value)}
                                 onKeyDown={(e) => {
                                     if (e.key === 'Enter')
+                                    {
                                         sendMessage()
+                                        setText("")
+                                    }
+                                        
                                 }}
                             ></textarea>
                             <button className="send" style={{ display: "none" }} >Send</button>
