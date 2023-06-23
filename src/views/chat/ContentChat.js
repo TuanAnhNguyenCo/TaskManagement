@@ -96,8 +96,10 @@ const ContentChat = (props) => {
                                 onKeyDown={(e) => {
                                     if (e.key === 'Enter')
                                     {
+                                        e.preventDefault()
                                         sendMessage()
                                         setText("")
+                                        
                                     }
                                         
                                 }}
