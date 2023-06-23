@@ -1,0 +1,23 @@
+.Notification-container{
+    position: absolute;
+    width: 400px;
+    max-height: 700px ;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 10;
+    box-shadow: 0px 0px 2px 2px #D9D9D9;
+    right: -140px;
+    top: 54px;
+    border-radius: 2px;
+    overflow: scroll;
+    padding: 30px;
+}
+.notification-seen{
+        height: 10px;
+        width: 10px;
+        background-color: #0b67d7;
+        position: absolute;
+        top: 81px;
+        right: 8px;
+        border-radius: 100%;
+}
+

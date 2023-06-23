@@ -1,0 +1,67 @@
+.calendar-state{
+    position: absolute;
+    right: 42px;
+    top:86px;
+    background-color: rgba(249, 248, 248, 1);
+}
+.calendar-state-row{
+    width: 700px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-top: 1px solid #EFEFEF;
+    border-left: 1px solid #EFEFEF;
+}
+.calendar-state-col{
+   
+    border-right: 1px solid #EFEFEF;
+    padding: 10px 0px;
+    text-align: center;
+}
+.calendar-state-header{
+    padding: 10px 0;
+}
+.calendar-state-up-down{
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+    margin: 0 10px;    
+}
+.calendar-status-add{
+    z-index: 3;
+    position: fixed;
+    height: 600px;
+    width: 700px;
+    background-color: rgba(249, 248, 248, 1);
+    top:147px;
+    right: 30px;
+    overflow: scroll;
+}
+.calendar-state-row1 {
+    width: 700px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-top: 1px solid #EFEFEF;
+    border-left: 1px solid #EFEFEF;
+    margin: 0 !important;
+}
+.calendar-state-row1-head {
+    width: 700px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #EFEFEF;
+    border-top: 1px solid #EFEFEF;
+    border-left: 1px solid #EFEFEF;
+    margin: 0 !important;
+    position: fixed !important;
+    top: 102px;
+   
+}
+.calendar-state-col1 {
+    border-right: 1px solid #EFEFEF;
+    padding: 10px 0px;
+    text-align: center;
+}
+.close-btn{
+    position: absolute;
+    top:-16px;
+    right:-16;
+}

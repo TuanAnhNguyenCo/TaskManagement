@@ -1,0 +1,39 @@
+
+.cld-left{
+        height: 100px;
+        width: 370px;
+        position: absolute;
+        left: 262px;
+        top: 86px;
+}
+
+.calendars-bt{
+        display: flex !important;
+        width: 290px;
+}
+.calendar-div{
+        display: flex;
+}
+.calendar-add-btn{
+        
+        right: 10px;
+        bottom: 17px;
+        width: 48px;
+        height: 48px;
+}
+.calendar-add-btn1 {
+        right: 10px;
+        bottom: 17px;
+        width: 48px;
+        height: 48px;
+}
+.calendar-workspace:hover{
+        background-color: #c6c7c8;
+        cursor: pointer;
+        /* width: 100%; */
+}
+.calendar-workspace{
+        width: 100%;
+        padding: 10px 0px;
+        border-bottom: 1px solid #c6c7c8 ;
+}

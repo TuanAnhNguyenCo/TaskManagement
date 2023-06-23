@@ -1,0 +1,221 @@
+
+.content-chat{
+    display: flex;
+}
+
+.message-list{
+    flex: 1;
+    padding: 16px;
+
+}
+.chat{
+    flex: 2;
+    position: absolute;
+    right: 11px;
+    top: 86px;
+    width: 788px;
+    height: 733px;
+    border-radius: 10px;
+    background-color: white;
+}
+.chat-container,.content-chat{
+    height: 100%;
+}
+.message-list .person{
+    display: flex;
+    padding: 16px 24px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 16px;
+}
+.message-list .person.active{
+    background-color: whitesmoke;
+
+}
+.message-list .person:hover{
+    background-color: whitesmoke;
+}
+.message-list .person .box{
+    position: relative;
+}
+.message-list .person .box .image{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.message-list .person .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.online{
+    min-width: 1.1rem;
+    min-height: 1.1rem;
+    background-color: lawngreen;
+    border-radius: 100%;
+    position: absolute;
+    border: 3px solid white;
+    right: 0;
+    bottom: 0;
+}
+.message-list .person .information{
+    margin: auto 20px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.message-list .person .status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+.message-list .person .status > .point {
+    min-height: 8px;
+    min-width: 8px;
+    background-color: #0084ff;
+    border-radius: 100%;
+}
+
+.chat .top{
+    display: flex;
+    padding: 16px ;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 2px rgba(0,0,0,.05);
+    border-bottom: 1px solid #EFEFEF;
+}
+
+
+.chat .top .box{
+    position: relative;
+}
+.chat .top  .box .image{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.chat .top .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chat .top  .information{
+    margin: auto 20px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.chat .top .options{
+    flex: 1;
+    justify-content: flex-end;
+    margin: auto 0;
+    display: flex;
+}
+.chat .top .options button{
+    background-color: transparent;
+    border: none;
+    padding: 0 16px;
+    color: gray;
+}
+/*bottom*/
+.chat .bottom{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-top: 1px solid;
+    
+}
+.chat .bottom .cup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFF2F4;
+    width: 100%;
+    padding: 16px;
+    border-radius: 18px;
+    overflow: hidden;
+}
+.chat .bottom .cup > textarea {
+    font-size: 0.85rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    width: 100%;
+    resize: none;
+    max-height: 100px;
+    background-color: #EFF2F4;
+}
+.chat .bottom .cup > .picker {
+    color: darkgray;
+    padding: 0 4px;
+    cursor: pointer;
+}
+/*middle*/
+.chat{
+    border-left: 1px solid #EFEFEF;
+}
+.chat > .middle {
+    background-color: #ffffff;
+    height: calc(100% - 94px - 57px - 84px);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+
+}
+.chat > .middle .messages {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 4px;
+}
+.chat > .middle .messages .clip {
+    display: flex;
+}
+.chat > .middle .messages .clip.sent {
+    flex-direction: row-reverse;
+}
+.chat > .middle .messages .clip.sent > .text {
+    background-color: #0084ff;
+    color: white;
+}
+.chat > .middle .messages .clip.received > .text {
+    background-color: #EFF2F4;
+}
+.chat > .middle .messages .clip > .text {
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 100%;
+    padding: 8px 16px;
+    border-radius: 18px;
+    word-break: keep-all;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 4px;
+}
+.chat > .middle .messages .clip > .name {
+    font-size: 12px;
+    font-weight: 500;
+
+    margin-bottom: 8px;
+}
+.chat > .middle::-webkit-scrollbar {
+    width: 8px;
+}
+.chat > .middle::-webkit-scrollbar-thumb {
+    background: rgba(188, 191, 214, 0.5);
+    border-radius: 14px;
+}
+.contact{
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 500;
+}

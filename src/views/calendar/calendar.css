@@ -1,0 +1,286 @@
+.btn-synchornize{
+    margin: auto;
+}
+.btn-synchornize img{
+    width: 40px;
+    margin-right: 4px;
+
+}
+.btn-synchornize:hover{
+    background: white;
+    color: #6C5DD3;
+    transition: .2s;
+    border: 1px solid #6C5DD3;
+
+}
+.btn-date{
+    background: white;
+    margin-right: 16px;
+    border: 1px solid #AAAAAA;
+    transition: .2s;
+    font-weight: 500;
+    color: #000000;
+    padding: 0 24px;
+}
+.btn-date:hover{
+    border: 1px solid #AAAAAA;
+    opacity: .8;
+    transition: .2s;
+
+}
+.calendar-heading{
+    border-bottom: 1px solid #EFEFEF;
+    padding: 16px 0;
+}
+
+/*calendar*/
+.content-calendar{
+    display: flex;
+}
+
+.calendar-list{
+    flex: 1;
+    padding: 16px;
+
+}
+.schedule-list{
+    flex: 3;
+    border-left: 1px solid #EFEFEF;
+    padding: 16px;
+    right: 11px;
+    top:86px;
+    width: 54%;
+    position: absolute;
+    overflow: scroll;
+    height: 88%;
+
+}
+
+.schedule-inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 !important;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.schedule-left{
+    display: flex;
+    padding: 16px;
+}
+.schedule-left .note{
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: red;
+    border-radius: 100%;
+    margin: auto;
+}
+.schedule-left .time{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 16px;
+}
+.schedule-left .content{
+    margin: auto 16px;
+    font-weight: 500;
+}
+.schedule-right{
+    margin: auto 16px;
+    background: azure;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.schedule-right:hover{
+    background-color: #efebef;
+}
+.btn-synchornize {
+    margin: auto;
+}
+
+.btn-synchornize img {
+    width: 40px;
+    margin-right: 4px;
+
+}
+
+.btn-synchornize:hover {
+    background: white;
+    color: #6C5DD3;
+    transition: .2s;
+    border: 1px solid #6C5DD3;
+
+}
+
+.btn-date {
+    background: white;
+    margin-right: 16px;
+    border: 1px solid #AAAAAA;
+    transition: .2s;
+    font-weight: 500;
+    color: #000000;
+    padding: 0 24px;
+}
+
+.btn-date:hover {
+    border: 1px solid #AAAAAA;
+    opacity: .8;
+    transition: .2s;
+
+}
+
+.calendar-heading {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 16px 0;
+}
+
+/*calendar*/
+.content-calendar {
+    display: flex;
+}
+
+.calendar-list {
+    flex: 1;
+    padding: 16px;
+
+}
+
+.schedule-list {
+    flex: 3;
+    border-left: 1px solid #EFEFEF;
+    padding: 16px;
+
+}
+
+.calendar-list,
+.schedule-list {
+    height: 100%;
+}
+
+.schedule-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 !important;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.schedule-left {
+    display: flex;
+    padding: 16px;
+}
+
+.schedule-left .note {
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: red;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.schedule-left .time {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 16px;
+}
+
+.schedule-left .content {
+    margin: auto 16px;
+    font-weight: 500;
+}
+
+.schedule-right {
+    margin: auto 16px;
+    background: azure;
+    border-radius: 100%;
+}
+
+.schedule-right a {
+    height: 100%;
+    font-size: 40px;
+    text-align: center;
+    width: 60px;
+}
+
+.react-calendar {
+    border: 0 !important;
+}
+
+.select-calendar {
+    padding: 16px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.note-header {
+    padding: 8px 16px 16px 16px;
+    background: #444CE7;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-header span {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.note-content-inner {
+    border-right: 1px solid #CDC0C0;
+    border-left: 1px solid #CDC0C0;
+    border-top: 0.5px solid #CDC0C0;
+    border-bottom: 0.5px solid #CDC0C0;
+    padding: 12px 16px;
+}
+
+.note-content-inner:first-child {
+    border-top: 1px solid #CDC0C0;
+}
+
+.note-content-inner:last-child {
+    border-bottom: 1px solid #CDC0C0;
+}
+
+.note-content-inner .note {
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 100%;
+    margin: auto 8px;
+}
+
+.note-content-inner .note.note-danger {
+    background-color: #ED0C0C;
+}
+
+.note-content-inner .note.note-success {
+    background-color: #0FEF0F;
+}
+
+.note-content-inner .note.note-warning {
+    background-color: #F7FC1C;
+}
+
+.note-content-inner .note.note-primary {
+    background-color: #008000;
+}
+
+.schedule-add-inner {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #33363F;
+    display: flex;
+}
+
+.tag {
+    background: #E7ECF4;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.modal-content{
+    width: 900px !important;
+}
+.cld-time{
+    width: 120px !important;
+    /* margin-right: 30px; */
+}

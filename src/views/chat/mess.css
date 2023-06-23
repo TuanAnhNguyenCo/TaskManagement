@@ -1,0 +1,43 @@
+.Mess-list{
+width: 335px;
+    height: 733px;
+    position: absolute;
+    top: 86px;
+    background-color: #ffff;
+    left: 259px;
+    padding: 10px;
+   
+}
+.team-img{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+      
+}
+.div-team-img {
+   position: relative;
+   display: inline-block;
+}
+.mess-item{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.mess-item:hover{
+    background-color: #EFF2F4;
+   
+}
+.online-icon{
+    width: 17px;
+    height: 17px;
+    background-color: rgb(14, 225, 70);
+    position: absolute;
+    z-index: 10;
+    border-radius: 100%;
+    right:0px;
+    bottom:0px;
+    border: 3px solid white;
+}

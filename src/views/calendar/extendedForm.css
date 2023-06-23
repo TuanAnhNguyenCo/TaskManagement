@@ -1,0 +1,30 @@
+.extended-form{
+            position: absolute;
+            right: 345px;
+            top: 86px;
+            width: 700px;
+            height: 680px;
+            background-color: #e9ecef;
+            z-index: 5;
+            padding: 10px;
+}
+.email-add{
+        padding: 5px;
+        background-color: #0dcaf0;
+        border-radius: 8px;
+        margin-right: 5px;
+}
+.email-suggestion{
+        position: absolute;
+        /* overflow: scroll; */
+}
+.email-suggestion-item:hover{
+        background-color: #4CC366;
+}
+.title-suggestion{
+        position: absolute;
+        z-index: 6;
+        height: 400px;
+        overflow: scroll;
+        min-width: 200px;
+}
