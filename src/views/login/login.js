@@ -219,8 +219,8 @@ const Login = (props) => {
                                                 <span>Remember me</span>
                                             </span>
                                         </div>
-                                        <span className="login-text18" onClick={props.showForgotPasswordPage}>
-                                            <span>Forgot Password?</span>
+                                        <span className="login-text18"  onClick={props.showForgotPasswordPage}>
+                                            <span >Forgot Password?</span>
                                         </span>
 
                                     </div>
@@ -234,13 +234,14 @@ const Login = (props) => {
 
                             <div className="login-frame176">
                                 {props.isFailed ?
-                                    <Alert variant={props.type} style={{ width: '100%' }}>
+                                    <Alert variant={props.type} style={{ width: '100%' }} className='mt-3'>
                                         {props.errAndSuccMessage}
 
                                     </Alert>
                                     : (null)}
 
-                                <Button variant="outline-primary" size='lg' style={{ width: '100%' }} onClick={props.handleLogin}>
+                                <Button variant="outline-primary" size='lg' style={{ width: '100%' }}
+                                    onClick={props.handleLogin} className='mt-3'>
                                     LOGIN
                                 </Button>
                                 <span className="login-text22">
