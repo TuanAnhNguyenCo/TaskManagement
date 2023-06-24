@@ -284,3 +284,13 @@
     width: 120px !important;
     /* margin-right: 30px; */
 }
+
+.progress-bar{
+    width: 500px;
+    
+}
+.close-task-btn{
+    position: absolute;
+    top: 8px;
+    right: 5px;
+}

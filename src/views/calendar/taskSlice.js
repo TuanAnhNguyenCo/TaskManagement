@@ -6,12 +6,14 @@ const init = {
         {
             "id": 1,
             "user_id": 6,
-            "related_user_id": [1, 4],
+            "related_user_id": [4],
             "workspace_id": 7,
             "title": "Play Soccer",
             "location": "Stadium",
             "desciption": "....",
             "workStatus": "Completed",
+            "done": 2,
+            close: true,
             "date": {
                 "start": 17000,
                 "end": 21000,
@@ -28,6 +30,8 @@ const init = {
             "title": "Game",
             "location": "X-Game Tran Dai Nghia",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 18000,
@@ -46,6 +50,8 @@ const init = {
             "title": "Drink Coffee",
             "location": "The Coffee House",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 18000,
@@ -64,6 +70,8 @@ const init = {
             "title": "Jogging",
             "location": "Thong Nhat Park",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 17000,
@@ -82,6 +90,8 @@ const init = {
             "title": "Learn Japanese",
             "location": "School",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 17000,
@@ -100,6 +110,8 @@ const init = {
             "title": "Learn EngLish",
             "location": "School",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 19000,
@@ -118,6 +130,8 @@ const init = {
             "title": "Watch Film",
             "location": "Cinema",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 21000,
@@ -136,6 +150,8 @@ const init = {
             "title": "Work in Lab",
             "location": "B1-1002",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 17000,
@@ -154,6 +170,8 @@ const init = {
             "title": "Cammping",
             "location": "Yen So Park",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 10000,
@@ -171,6 +189,8 @@ const init = {
             "title": "Do my homework",
             "location": "Circle K",
             "desciption": "....",
+            "done": 3,
+            close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 20000,
@@ -273,7 +293,205 @@ const init = {
                 "year": 2023
             }
         }
+    ],
+    'taskProgress': [
+        {
+            id: 1,
+            user_id: 6,
+            task_id: 1,
+            workStatus: "Completed",
+        },
+        {
+            id: 2,
+            user_id: 4,
+            task_id: 1,
+            workStatus: "Completed",
+        },
+        {
+            id: 3,
+            user_id: 6,
+            task_id: 2,
+            workStatus: "Completed",
+        },
+        {
+            id: 4,
+            user_id: 3,
+            task_id: 2,
+            workStatus: "Completed",
+        },
+        {
+            id: 5,
+            user_id: 4,
+            task_id: 2,
+            workStatus: "Completed",
+        },
+        {
+            id: 6,
+            user_id: 6,
+            task_id: 3,
+            workStatus: "Completed",
+        },
+        {
+            id: 7,
+            user_id: 1,
+            task_id: 3,
+            workStatus: "Completed",
+        }, {
+            id: 8,
+            user_id: 4,
+            task_id: 3,
+            workStatus: "Completed",
+        },
+        {
+            id: 9,
+            user_id: 6,
+            task_id: 4,
+            workStatus: "Completed",
+        },
+        {
+            id: 10,
+            user_id: 1,
+            task_id: 4,
+            workStatus: "Completed",
+        },
+        {
+            id: 11,
+            user_id: 5,
+            task_id: 4,
+            workStatus: "Completed",
+        },
+        {
+            id: 12,
+            user_id: 6,
+            task_id: 5,
+            workStatus: "Completed",
+        },
+        {
+            id: 13,
+            user_id: 2,
+            task_id: 5,
+            workStatus: "Completed",
+        },
+        {
+            id: 14,
+            user_id: 5,
+            task_id: 5,
+            workStatus: "Completed",
+        },
+        {
+            id: 15,
+            user_id: 6,
+            task_id: 6,
+            workStatus: "Completed",
+        },
+        {
+            id: 16,
+            user_id: 2,
+            task_id: 6,
+            workStatus: "Completed",
+        },
+        {
+            id: 17,
+            user_id: 5,
+            task_id: 6,
+            workStatus: "Completed",
+        },
+        {
+            id: 18,
+            user_id: 6,
+            task_id: 7,
+            workStatus: "Completed",
+        },
+        {
+            id: 19,
+            user_id: 2,
+            task_id: 7,
+            workStatus: "Completed",
+        },
+        {
+            id: 20,
+            user_id: 5,
+            task_id: 7,
+            workStatus: "Completed",
+        },
+        {
+            id: 21,
+            user_id: 6,
+            task_id: 8,
+            workStatus: "Completed",
+        },
+        {
+            id: 22,
+            user_id: 3,
+            task_id: 8,
+            workStatus: "Completed",
+        }, {
+            id: 23,
+            user_id: 5,
+            task_id: 8,
+            workStatus: "Completed",
+        },
+        {
+            id: 24,
+            user_id: 6,
+            task_id: 9,
+            workStatus: "Completed",
+        },
+        {
+            id: 25,
+            user_id: 4,
+            task_id: 9,
+            workStatus: "Completed",
+        },
+        {
+            id: 26,
+            user_id: 5,
+            task_id: 9,
+            workStatus: "Completed",
+        },
+        {
+            id: 27,
+            user_id: 6,
+            task_id: 10,
+            workStatus: "Completed",
+        },
+        {
+            id: 28,
+            user_id: 2,
+            task_id: 10,
+            workStatus: "Completed",
+        },
+        {
+            id: 29,
+            user_id: 4,
+            task_id: 10,
+            workStatus: "Completed",
+        }
     ]
+}
+const createTaskProgress = (id, user_id, task_id) => {
+    return {
+        id: id,
+        user_id: user_id,
+        task_id: task_id,
+        workStatus: "Inprogress",
+    }
+}
+
+const createNotification = (id, user_id, text) => {
+    const date = new Date()
+    return {
+        id: id,
+        user_id: user_id,
+        seen: false,
+        text: text,
+        "date": {
+            "start": date.getHours() * 3600 + date.getMinutes() * 60,
+            "day": date.getDate(),
+            "month": date.getMonth() + 1,
+            "year": date.getFullYear()
+        }
+    }
 }
 
 const taskSlice = createSlice({
@@ -290,12 +508,39 @@ const taskSlice = createSlice({
 
             })
             .addCase(updateWorkStatus.fulfilled, (state, action) => {
-                const { id, status } = action.payload;
+                const [id, user_id, status, username] = action.payload;
 
-                const task = state.tasks.find(t => t.id == id)
-                if (task) {
-                    task.workStatus = status
+                const taskProgress = state.taskProgress.find(t => t.task_id === id && t.user_id === user_id);
+                const task = state.tasks.find(t => t.id === id)
+
+
+                if (taskProgress) {
+                    taskProgress.workStatus = status
+                    const count1 = state.taskProgress.filter(t => t.task_id === id && t.workStatus === "Completed").length
+                    const count2 = state.taskProgress.filter(t => t.task_id === id && t.workStatus === "Cancelled").length
+                    // const count3 = state.taskProgress.filter(t => t.id === task_id && t.workStatus === "Inprogress")
+                    if (task.related_user_id.length + 1 === count1) {
+                        task.workStatus = "Completed"
+                    } else if (task.related_user_id.length + 1 === count2) {
+                        task.workStatus = "Cancelled"
+                    } else task.workStatus = "Inprogress"
+                    if (task.user_id !== user_id)
+                        state.notifications.push(
+                            createNotification(state.notifications.length + 1, task.user_id,
+                                `Bạn ${username} của bạn đã thay đổi trạng thái công việc "${task.title}" thành "${status}"`
+                            )
+                        )
+                    for (var i in task.related_user_id) {
+                        if (task.related_user_id[i] === user_id) continue
+
+                        state.notifications.push(
+                            createNotification(state.notifications.length + 1, task.related_user_id[i],
+                                `Bạn ${username} của bạn đã thay đổi trạng thái công việc "${task.title}" thành "${status}"`
+                            )
+                        )
+                    }
                 }
+
 
             })
             .addCase(addTask.fulfilled, (state, action) => {
@@ -304,7 +549,7 @@ const taskSlice = createSlice({
                 var workspace_id = 0
 
                 if (wsp.length === 0) {
-                    workspace_id = state.workspace[state.workspace.length - 1] + 1
+                    workspace_id = state.workspace[state.workspace.length - 1].id + 1
                     state.workspace.push({
                         id: workspace_id,
                         user_id: user_id,
@@ -313,6 +558,7 @@ const taskSlice = createSlice({
                         checked: true,
                         other_workspace: false,
                     })
+                    console.log(state.workspace);
                 } else {
                     workspace_id = wsp[0].id
                     wsp[0].related_user_id = friends
@@ -337,21 +583,12 @@ const taskSlice = createSlice({
                         }
                     }
                 )
+                state.taskProgress.push(createTaskProgress(state.taskProgress.length + 1, user_id, state.tasks.length))
                 for (var i in friends) {
                     state.notifications.push(
-                        {
-                            id: state.notifications.length + 1,
-                            user_id: friends[i],
-                            seen: false,
-                            text: `Bạn đã được thêm vào task: ${title} ở workspace ${state.workspace.find(w => w.id == workspace_id).name}`,
-                            "date": {
-                                "start": start,
-                                "day": day,
-                                "month": month,
-                                "year": year,
-                            }
-                        }
+                        createNotification(state.notifications.length + 1, friends[i], `Bạn đã được thêm vào task: ${title} ở workspace ${state.workspace.find(w => w.id == workspace_id).name}`)
                     )
+                    state.taskProgress.push(createTaskProgress(state.taskProgress.length + 1, friends[i], state.tasks.length))
                 }
 
             })
@@ -368,10 +605,20 @@ const taskSlice = createSlice({
                         "year": year,
                     }
                     task.workStatus = 'Inprogress'
+                    for (var i in task.related_user_id)
+                    {
+                        state.taskProgress.find(p => p.task_id === taskID && p.user_id === task.related_user_id[i]).task_id = -1
+                    }
                     task.related_user_id = friends
+                    for (var i in task.related_user_id) {
+                        state.taskProgress.push(
+                            createTaskProgress(state.taskProgress.length + 1, task.related_user_id[i], taskID)
+                        )
+                    }
                     task.description = description
                     const wsp = state.workspace.find(w => w.id === task.workspace_id)
                     wsp.related_user_id = friends
+
                 }
 
             })
@@ -475,6 +722,11 @@ const taskSlice = createSlice({
                     }
                 )
             })
+            .addCase(updateCloseStatus.fulfilled, (state, action) => {
+                const [task_id] = action.payload
+                const task = state.tasks.find(t => t.id === task_id)
+                task.close = !task.close
+            })
 
     }
 }
@@ -484,9 +736,8 @@ export const updateCheckedWorkspace = createAsyncThunk('workspace/updateChecked'
     return { id };
 });
 export const updateWorkStatus = createAsyncThunk('tasks/updateWorkStatus', async (data, { getState }) => {
-    const id = data[0]
-    const status = data[1]
-    return { id, status };
+
+    return data;
 });
 export const synchornizeGG = createAsyncThunk('workspace/Synchronize', async (data, { getState }) => {
     return {};
@@ -501,6 +752,9 @@ export const updateTask = createAsyncThunk('taks/update', async (data, { state }
 });
 
 export const addMess = createAsyncThunk('mess/add', async (data, { state }) => {
+    return data;
+});
+export const updateCloseStatus = createAsyncThunk('task/updateClose', async (data, { state }) => {
     return data;
 });
 
@@ -577,6 +831,7 @@ const checkExistRelatedUser = (related_user_id, id) => {
 
 export const getMyWorkspace = (state, user_id) => {
     const my_workspace = state.tasks.workspace.filter(w => w.other_workspace == false && w.user_id == user_id)
+    
     return my_workspace
 }
 export const getOtherWorkspace = (state, user_id) => {
@@ -611,6 +866,12 @@ export const getMessByTaskId = (state, id) => {
 
 export const getNotifications = (state, id) => {
     return state.tasks.notifications.filter(n => n.user_id === id)
+}
+export const getTaskProgress = (state, user_id) => {
+    return state.tasks.taskProgress.filter(t => t.user_id === user_id)
+}
+export const getTotalProgress = (state) => {
+    return state.tasks.taskProgress
 }
 
 

@@ -15,6 +15,7 @@ const ExtendedForm1 = (props) => {
     const accounts = useSelector(getAccountList)
     const tasks = useSelector((state) => getTasks(state, props.userInfo.id))
     const [emails, setEmails] = useState([])
+    const [inputEmail, setInputEmail] = useState('')
     const [partner, setPartner] = useState([])
     const [title, setTitle] = useState('')
     const [titleList, setTitleList] = useState([])
@@ -26,6 +27,7 @@ const ExtendedForm1 = (props) => {
     const [endT, setEndT] = useState(new Date())
     const [taskID, setTaskID] = useState('')
     const total_workspace = useSelector((state) => getTotalWorkspace(state, props.userInfo.id))
+    const [submit, setSubmit] = useState(false)
     const checkExistRelatedUser = (partner, id) => {
         return partner.filter(x => x.id == id).length
     }
@@ -33,6 +35,7 @@ const ExtendedForm1 = (props) => {
 
     const handleFindUser = (e) => {
         const email = e.target.value
+        setInputEmail(email)
         if (email !== "")
             setEmails(accounts.filter(ac => ac.email.indexOf(email) !== -1))
         else
@@ -46,6 +49,7 @@ const ExtendedForm1 = (props) => {
         else
             setTitleList([])
         setTitle(ti)
+        setSubmit(false)
 
     }
     const addPartner = (email) => {
@@ -53,6 +57,7 @@ const ExtendedForm1 = (props) => {
         if (arr.filter(p => p.email.indexOf(email) !== -1).length === 0)
             arr.push(accounts.filter(ac => ac.email == email)[0])
         setPartner(arr)
+        setInputEmail('')
         setEmails([])
     }
     const removePartner = (email) => {
@@ -87,6 +92,7 @@ const ExtendedForm1 = (props) => {
         for (var i in task.related_user_id)
             accounts.filter(ac => ac.id === task.related_user_id[i]).map(ac => arr.push(ac))
         setPartner(arr)
+        setSubmit(true)
         setTaskID(task.id)
     }
 
@@ -125,7 +131,7 @@ const ExtendedForm1 = (props) => {
                 <Form.Group className="mb-3" controlId="formGridAddress1">
                     <Form.Label>Partner</Form.Label>
                     <Form.Control placeholder="Enter your partner email"
-                        onChange={(e) => handleFindUser(e)}
+                        onChange={(e) => handleFindUser(e)} value={inputEmail}
                         disabled={checkExistRelatedUser(partner, props.userInfo.id) !== 0 ? true : false}
                     />
                     <div style={{ wordWrap: 'break-word' }} className="mt-2">
@@ -179,7 +185,10 @@ const ExtendedForm1 = (props) => {
 
                 </Row>
 
-                <Button variant="primary" type="submit" style={{ position: 'absolute', right: '100px' }}>
+                <Button variant="primary" type="submit" style={{ position: 'absolute', right: '100px' }}
+                    disabled={!submit}
+                    d
+                >
                     Submit
                 </Button>
                 <Button variant="danger" onClick={props.handleClose} style={{ position: 'absolute', right: '10px' }}>
