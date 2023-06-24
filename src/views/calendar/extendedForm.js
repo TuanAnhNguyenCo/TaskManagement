@@ -12,6 +12,7 @@ import moment from 'moment';
 const ExtendedForm = (props) => {
     const accounts = useSelector(getAccountList)
     const [emails, setEmails] = useState([])
+    const [inputEmail, setInputEmail] = useState('')
     const [partner, setPartner] = useState([])
     const [title, setTitle] = useState('')
     const [location, setLocation] = useState('')
@@ -26,6 +27,7 @@ const ExtendedForm = (props) => {
 
     const handleFindUser = (e) => {
         const email = e.target.value
+        setInputEmail(email)
         if (email !== "")
             setEmails(accounts.filter(ac => ac.email.indexOf(email) !== -1))
         else
@@ -37,6 +39,7 @@ const ExtendedForm = (props) => {
         if (arr.indexOf(email) == -1)
             arr.push(accounts.filter(ac => ac.email == email)[0])
         setPartner(arr)
+        setInputEmail('')
         setEmails([])
     }
     const removePartner = (email) => {
@@ -87,7 +90,7 @@ const ExtendedForm = (props) => {
 
                 <Form.Group className="mb-3" controlId="formGridAddress1">
                     <Form.Label>Partner</Form.Label>
-                    <Form.Control placeholder="Enter your partner email" onChange={(e) => handleFindUser(e)} />
+                    <Form.Control placeholder="Enter your partner email" value={inputEmail} onChange={(e) => handleFindUser(e)} />
                     <div style={{ wordWrap: 'break-word' }} className="mt-2">
                         {partner.map(p =>
                             <span key={p.id} className="email-add">{p.email}

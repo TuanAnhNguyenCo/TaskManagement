@@ -1,12 +1,14 @@
 import React from "react";
 import "./calendar.css";
-import { getTasksByDate } from "./taskSlice";
+import { getTasksByDate, getTotalProgress } from "./taskSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
 
 import { faPlus, faUserCircle, fa3 } from "@fortawesome/free-solid-svg-icons";
+import { Button, ProgressBar } from "react-bootstrap";
+import { updateCloseStatus } from "./taskSlice";
 
 import ExtendedForm from "./extendedForm";
 import ExtendedForm1 from "./extendedForm1";
@@ -16,10 +18,11 @@ const ContentCalendar = (props) => {
         props.selectedDate.getDate(), props.selectedDate.getMonth() + 1,
         props.selectedDate.getFullYear(), props.userInfo.id
     ))
+    const disptach = useDispatch()
     const myStyle = {
         opacity: 0.1,
     };
-
+    const totalProgress = useSelector(getTotalProgress)
     const [modalEmailShow, setEmailModalShow] = useState(false);
 
 
@@ -57,6 +60,25 @@ const ContentCalendar = (props) => {
                                 <br />
                                 - {task.description}
                                 <br />
+                                <div className="progress-bar mb-1">
+                                    <ProgressBar>
+                                        <ProgressBar striped variant="success"
+                                            animated
+                                            now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Completed").length / (task.related_user_id.length + 1)} key={1}
+                                            label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Completed").length}/${(task.related_user_id.length + 1) }`}
+                                        />
+                                        <ProgressBar variant="warning"
+                                            animated
+                                            now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Inprogress").length / (task.related_user_id.length + 1)} key={2}
+                                            label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Inprogress").length}/${(task.related_user_id.length + 1)}`}
+                                        />
+                                        <ProgressBar striped variant="danger"
+                                            key={3} animated
+                                            now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Cancelled").length / (task.related_user_id.length + 1)} 
+                                            label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Cancelled").length}/${(task.related_user_id.length + 1)}`}
+                                        />
+                                    </ProgressBar>
+                                </div>
                                 <div style={{ height: '20px' }} className="mt-1">
 
                                     {task.related_user_id.map((id, idx) => {
@@ -67,14 +89,12 @@ const ContentCalendar = (props) => {
                                                 <FontAwesomeIcon icon={fa3} style={{ color: "#0c5fed", }} />
                                                 <FontAwesomeIcon icon={faPlus} style={{ color: "#0e5ddd", }} />
                                             </div>
-
-
-                                    }
-
-                                    )}
-
-
-                                </div>
+                                    })}</div>
+                                {/* {props.userInfo.id === task.user_id ? (task.close  ?
+                                    <Button className="close-task-btn" onClick={() => disptach(updateCloseStatus([task.id]))}>Open</Button> :
+                                    <Button className="close-task-btn" onClick={() => disptach(updateCloseStatus([task.id]))}>Close</Button>)
+                                    :null
+                                } */}
                             </div>
 
 
