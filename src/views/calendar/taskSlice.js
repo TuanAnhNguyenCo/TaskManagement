@@ -605,8 +605,10 @@ const taskSlice = createSlice({
                         "year": year,
                     }
                     task.workStatus = 'Inprogress'
-                    for (var i in task.related_user_id)
-                    {
+
+                    state.taskProgress.find(t => t.user_id === task.user_id && t.task_id === task.id).workStatus = 'Inprogress'
+
+                    for (var i in task.related_user_id) {
                         state.taskProgress.find(p => p.task_id === taskID && p.user_id === task.related_user_id[i]).task_id = -1
                     }
                     task.related_user_id = friends
@@ -831,7 +833,7 @@ const checkExistRelatedUser = (related_user_id, id) => {
 
 export const getMyWorkspace = (state, user_id) => {
     const my_workspace = state.tasks.workspace.filter(w => w.other_workspace == false && w.user_id == user_id)
-    
+
     return my_workspace
 }
 export const getOtherWorkspace = (state, user_id) => {
