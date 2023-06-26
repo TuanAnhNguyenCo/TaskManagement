@@ -67,7 +67,7 @@ const init = {
         {
             'id': 11,
             'name': 'Quân Lê',
-            'email': 'quan@gmail.com',
+            'email': 'quanle@gmail.com',
             'password': '123'
         }
     ],
