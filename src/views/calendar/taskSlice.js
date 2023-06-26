@@ -10,14 +10,14 @@ const init = {
             "workspace_id": 7,
             "title": "Play Soccer",
             "location": "Stadium",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "workStatus": "Completed",
             "done": 2,
             close: true,
             "date": {
                 "start": 17000,
                 "end": 21000,
-                "day": 14,
+                "day": 26,
                 "month": 6,
                 "year": 2023
             }
@@ -29,14 +29,14 @@ const init = {
             "workspace_id": 8,
             "title": "Game",
             "location": "X-Game Tran Dai Nghia",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 18000,
                 "end": 23000,
-                "day": 15,
+                "day": 25,
                 "month": 6,
                 "year": 2023
             }
@@ -49,14 +49,14 @@ const init = {
             "workspace_id": 8,
             "title": "Drink Coffee",
             "location": "The Coffee House",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 18000,
                 "end": 23000,
-                "day": 16,
+                "day": 24,
                 "month": 6,
                 "year": 2023
             }
@@ -69,14 +69,14 @@ const init = {
             "workspace_id": 7,
             "title": "Jogging",
             "location": "Thong Nhat Park",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
                 "start": 17000,
                 "end": 19000,
-                "day": 17,
+                "day": 23,
                 "month": 6,
                 "year": 2023
             }
@@ -89,14 +89,14 @@ const init = {
             "workspace_id": 9,
             "title": "Learn Japanese",
             "location": "School",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
-                "start": 17000,
-                "end": 19000,
-                "day": 18,
+                "start": 27000,
+                "end": 29000,
+                "day": 26,
                 "month": 6,
                 "year": 2023
             }
@@ -109,14 +109,14 @@ const init = {
             "workspace_id": 9,
             "title": "Learn EngLish",
             "location": "School",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
-                "start": 19000,
-                "end": 21000,
-                "day": 18,
+                "start": 30000,
+                "end": 35000,
+                "day": 26,
                 "month": 6,
                 "year": 2023
             }
@@ -129,14 +129,14 @@ const init = {
             "workspace_id": 8,
             "title": "Watch Film",
             "location": "Cinema",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
-                "start": 21000,
-                "end": 23000,
-                "day": 18,
+                "start": 36000,
+                "end": 40000,
+                "day": 26,
                 "month": 6,
                 "year": 2023
             }
@@ -149,14 +149,14 @@ const init = {
             "workspace_id": 9,
             "title": "Work in Lab",
             "location": "B1-1002",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
-                "start": 17000,
-                "end": 20000,
-                "day": 19,
+                "start": 41000,
+                "end": 47000,
+                "day": 26,
                 "month": 6,
                 "year": 2023
             }
@@ -169,14 +169,14 @@ const init = {
             "workspace_id": 9,
             "title": "Cammping",
             "location": "Yen So Park",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
-                "start": 10000,
-                "end": 20000,
-                "day": 20,
+                "start": 50000,
+                "end": 60000,
+                "day": 26,
                 "month": 6,
                 "year": 2023
             }
@@ -188,14 +188,14 @@ const init = {
             "workspace_id": 7,
             "title": "Do my homework",
             "location": "Circle K",
-            "desciption": "....",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
             close: true,
             "workStatus": "Completed",
             "date": {
-                "start": 20000,
-                "end": 22000,
-                "day": 20,
+                "start": 65000,
+                "end": 75000,
+                "day": 26,
                 "month": 6,
                 "year": 2023
             }
@@ -463,8 +463,76 @@ const init = {
         },
         {
             id: 29,
-            user_id: 4,
+            user_id: 6,
             task_id: 10,
+            workStatus: "Completed",
+        },
+        {
+            id: 30,
+            user_id: 6,
+            task_id: 501,
+            workStatus: "Completed",
+        },
+        {
+            id: 31,
+            user_id: 6,
+            task_id: 502,
+            workStatus: "Completed",
+        },
+        {
+            id: 32,
+            user_id: 6,
+            task_id: 503,
+            workStatus: "Completed",
+        },
+        {
+            id: 33,
+            user_id: 1,
+            task_id: 501,
+            workStatus: "Completed",
+        },
+        {
+            id: 34,
+            user_id: 2,
+            task_id: 501,
+            workStatus: "Completed",
+        },
+        {
+            id: 35,
+            user_id: 3,
+            task_id: 501,
+            workStatus: "Completed",
+        },
+        {
+            id: 36,
+            user_id: 4,
+            task_id: 501,
+            workStatus: "Completed",
+        },
+        {
+            id: 37,
+            user_id: 5,
+            task_id: 501,
+            workStatus: "Completed",
+        }, {
+            id: 38,
+            user_id: 1,
+            task_id: 502,
+            workStatus: "Completed",
+        }, {
+            id: 39,
+            user_id: 3,
+            task_id: 502,
+            workStatus: "Completed",
+        }, {
+            id: 40,
+            user_id: 1,
+            task_id: 503,
+            workStatus: "Completed",
+        }, {
+            id: 41,
+            user_id: 1,
+            task_id: 503,
             workStatus: "Completed",
         }
     ]

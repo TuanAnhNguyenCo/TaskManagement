@@ -30,7 +30,6 @@ const Notification = (props) => {
     return (
         <div className='Notification-container'>
             <Row>Thông báo</Row>
-           
             {notifications.map(n => (
                 <Row key={n.id} className='mess-item' >
                     <Col lg='2' style={{ marginRight: '20px' }}>

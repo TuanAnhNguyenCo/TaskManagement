@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { useDispatch } from 'react-redux'
 import { synchornizeGG } from './taskSlice'
-import { faBell } from '@fortawesome/free-solid-svg-icons'
+import { faBell,faGlobe } from '@fortawesome/free-solid-svg-icons'
 import Notification from '../notification/notification'
 import { useState } from 'react'
 import { getNotifications } from './taskSlice'
@@ -45,12 +45,13 @@ const Header = (props) => {
 
             <div className="component11-logo">
                 <div className="component11-daterange">
-                    <img
+                    {/* <img
                         src="/external/rectangle25i197-wz55-200h.png"
                         alt="Rectangle25I197"
                         className="component11-rectangle25"
-                    />
-                    <img
+                    /> */}
+                    <FontAwesomeIcon icon={faGlobe} style={{ color: "#0f51c2", }} className='component11-rectangle25'/>
+                    {/* <img
                         src="/external/rectangle26i197-m2op-200h.png"
                         alt="Rectangle26I197"
                         className="component11-rectangle26"
@@ -84,10 +85,12 @@ const Header = (props) => {
                         src="/external/rectangle30i197-uehr-200h.png"
                         alt="Rectangle30I197"
                         className="component11-rectangle30"
-                    />
+                    /> */}
                 </div>
                 <span className="component11-text048">
+                    
                     <span>Supernet</span>
+
                 </span>
             </div>
             <div className="component11-group141">
