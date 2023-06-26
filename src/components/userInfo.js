@@ -124,12 +124,13 @@ const UserInfo = (props) => {
 
 
     const handleLogin = (e) => {
-        console.log(accounts)
         // Kiểm tra xem email có đúng định dạng không
         if (checkValidEmail(username)) {
             // Kiểm tra xem có đúng tài khoản mật khẩu không
-            const account = accounts.find(acc => acc.email === username && acc.password === password)
-            if (account) {
+            const account = accounts.filter(acc => acc.email === username && acc.password === password)
+
+            if (account.length > 0) {
+
                 localStorage.setItem('email', username);
                 localStorage.setItem('password', password);
                 setIsFailed(false)
@@ -140,7 +141,7 @@ const UserInfo = (props) => {
                 setIsFailed(true)
                 setErrAndSuccMessage("Đăng nhập thành công")
                 props.setIsLogin(true)
-                
+
             }
             else {
                 setIsFailed(true)
