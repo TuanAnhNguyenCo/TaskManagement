@@ -727,7 +727,7 @@ const taskSlice = createSlice({
                             "title": "Họp với ban lãnh đạo bàn về chính sách cải cách",
                             "location": "Trung tâm hội nghị quốc gia",
                             "description": "...",
-                            "workStatus": "Inprogress",
+                            "workStatus": "Completed",
                             "date": {
                                 "start": 30000,
                                 "end": 35155,
@@ -745,7 +745,7 @@ const taskSlice = createSlice({
                         "title": "Đưa vợ đi spa",
                         "location": "Spa",
                         "description": "...",
-                        "workStatus": "Inprogress",
+                        "workStatus": "Completed",
                         "date": {
                             "start": 36000,
                             "end": 45000,
@@ -765,7 +765,7 @@ const taskSlice = createSlice({
                         "title": "Đi đánh golf với bạn",
                         "location": "Sân golf",
                         "description": "...",
-                        "workStatus": "Inprogress",
+                        "workStatus": "Completed",
                         "date": {
                             "start": 55000,
                             "end": 65000,
