@@ -33,6 +33,39 @@ const init = {
         },
         {
             'id': 6,
+            'name': 'Yến Linh',
+            'email': 'ylinh@gmail.com',
+            'password': '123'
+        },
+        {
+            'id': 7,
+            'name': 'Tùng Quân',
+            'email': 'quan@gmail.com',
+            'password': '123'
+        },
+        {
+            'id': 8,
+            'name': 'Chi',
+            'email': 'chi@gmail.com',
+            'password': '123'
+        },
+        ,
+        {
+            'id': 9,
+            'name': 'Minh Hà',
+            'email': 'ha@gmail.com',
+            'password': '123'
+        },
+        ,
+        {
+            'id': 10,
+            'name': 'An',
+            'email': 'an@gmail.com',
+            'password': '123'
+        }
+        ,
+        {
+            'id': 11,
             'name': 'Quân Lê',
             'email': 'quan@gmail.com',
             'password': '123'

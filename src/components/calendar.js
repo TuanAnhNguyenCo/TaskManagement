@@ -20,19 +20,19 @@ const Calendar = (props) => {
     const [isDashboard1, setIsDashboard] = useState(false)
     const [isCalendar1, setIsCalendar] = useState(true)
     const [isTasks1, setIsTasks] = useState(false)
-    const [isChat,setIsChat] = useState(false)
+    const [isChat, setIsChat] = useState(false)
     const [modalShow, setModalShow] = useState(false);
     const [task, setTask] = useState({ id: 0 })
     const handleShow = () => setModalShow(true);
     const accounts = useSelector(getAccountList)
-    console.log(task)
 
     useEffect(() => {
         const email = localStorage.getItem('email')
         const password = localStorage.getItem('password');
-        const account = accounts.find(acc => acc.email === email && acc.password === password)
-        if (account) {
-            setUserInfo(account)
+        const account = accounts.filter(acc => acc.email === email && acc.password === password)
+
+        if (account.length > 0) {
+            setUserInfo(account[0])
             setIsLogin(true)
         } else {
             setUserInfo('')
@@ -92,7 +92,7 @@ const Calendar = (props) => {
                         isTasks={isTasks1}
                         isDashboard={isDashboard1}
                         isChat={isChat}
-                       
+
                     />
                     {isDashboard1 ?
                         <DashBoard
@@ -110,10 +110,10 @@ const Calendar = (props) => {
 
                         /> :
                         isChat == false ?
-                        <CalendarLeft handleDateSelect={handleDateSelect} selectedDate={selectedDate}
-                            userInfo={userInfo}
-                            modalShow={modalShow}
-                        /> : null}
+                            <CalendarLeft handleDateSelect={handleDateSelect} selectedDate={selectedDate}
+                                userInfo={userInfo}
+                                modalShow={modalShow}
+                            /> : null}
                     {isCalendar1 ? <ContentCalendar
                         selectedDate={selectedDate}
                         userInfo={userInfo}
@@ -126,11 +126,11 @@ const Calendar = (props) => {
                     {isTasks1 ? <CalendarState selectedDate={selectedDate}
                         userInfo={userInfo}
                     /> : null}
-                    {isChat ? <ContentChat 
+                    {isChat ? <ContentChat
                         userInfo={userInfo}
                         accounts={accounts}
                         task={task}
-                        setTask = {setTask}
+                        setTask={setTask}
                     /> : null}
                 </div>
             }
