@@ -21,8 +21,6 @@ const MessList = (props) => {
     }
     useEffect(() => {
         setSearchedTasks(tasks)
-        // if (tasks.length > 0 && props.task.id !== 0)
-        //     props.setTask(tasks[0])
     }, [props.userInfo.id]);
     return (
         <div className='Mess-list'>

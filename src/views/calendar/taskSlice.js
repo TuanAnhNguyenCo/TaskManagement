@@ -17,8 +17,8 @@ const init = {
             "date": {
                 "start": 17000,
                 "end": 21000,
-                "day": 26,
-                "month": 6,
+                "day": 2,
+                "month": 7,
                 "year": 2023
             }
         },
@@ -36,8 +36,8 @@ const init = {
             "date": {
                 "start": 18000,
                 "end": 23000,
-                "day": 25,
-                "month": 6,
+                "day": 1,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -54,10 +54,10 @@ const init = {
             close: true,
             "workStatus": "Completed",
             "date": {
-                "start": 18000,
-                "end": 23000,
-                "day": 24,
-                "month": 6,
+                "start": 23000,
+                "end": 40000,
+                "day": 1,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -74,10 +74,10 @@ const init = {
             close: true,
             "workStatus": "Completed",
             "date": {
-                "start": 17000,
-                "end": 19000,
-                "day": 23,
-                "month": 6,
+                "start": 42000,
+                "end": 50000,
+                "day": 1,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -96,8 +96,8 @@ const init = {
             "date": {
                 "start": 27000,
                 "end": 29000,
-                "day": 26,
-                "month": 6,
+                "day": 2,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -116,8 +116,8 @@ const init = {
             "date": {
                 "start": 30000,
                 "end": 35000,
-                "day": 26,
-                "month": 6,
+                "day": 2,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -136,8 +136,8 @@ const init = {
             "date": {
                 "start": 36000,
                 "end": 40000,
-                "day": 26,
-                "month": 6,
+                "day": 2,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -156,8 +156,8 @@ const init = {
             "date": {
                 "start": 41000,
                 "end": 47000,
-                "day": 26,
-                "month": 6,
+                "day": 2,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -176,8 +176,8 @@ const init = {
             "date": {
                 "start": 50000,
                 "end": 60000,
-                "day": 26,
-                "month": 6,
+                "day": 2,
+                "month": 7,
                 "year": 2023
             }
         },
@@ -195,8 +195,8 @@ const init = {
             "date": {
                 "start": 65000,
                 "end": 75000,
-                "day": 26,
-                "month": 6,
+                "day": 2,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -289,7 +289,7 @@ const init = {
             "date": {
                 "start": 17000,
                 "day": 14,
-                "month": 6,
+                "month": 7,
                 "year": 2023
             }
         }
@@ -732,7 +732,7 @@ const taskSlice = createSlice({
                                 "start": 30000,
                                 "end": 35155,
                                 "day": 20,
-                                "month": 6,
+                                "month": 7,
                                 "year": 2023
                             }
                         }
@@ -750,7 +750,7 @@ const taskSlice = createSlice({
                             "start": 36000,
                             "end": 45000,
                             "day": 20,
-                            "month": 6,
+                            "month": 7,
                             "year": 2023
                         }
                     }
@@ -770,7 +770,7 @@ const taskSlice = createSlice({
                             "start": 55000,
                             "end": 65000,
                             "day": 20,
-                            "month": 6,
+                            "month": 7,
                             "year": 2023
                         }
                     }

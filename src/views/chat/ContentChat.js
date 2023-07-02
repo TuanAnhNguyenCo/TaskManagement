@@ -14,7 +14,7 @@ const ContentChat = (props) => {
     const sendMessage = () => {
         dispatch(addMess([props.userInfo.id,props.task.id,text]))
     }
-    console.log(props.task,'chat')
+   
     return (
         <>
             {props.task.id !== 0 ?
@@ -71,19 +71,7 @@ const ContentChat = (props) => {
                                         )
                                     }
                                 })}
-                                
-                            {/* <div className="clip received">
-                                <div className="image"><img
-                                    src={`./${process.env.PUBLIC_URL}/img/chat1.png`}
-                                    alt=""
-                                /></div>
-                            </div>
-                            <div className="clip received">
-                                <div className="image"><img
-                                    src={`./${process.env.PUBLIC_URL}/img/chat2.png`}
-                                    alt=""
-                                /></div>
-                            </div> */}
+                    
                           
                             </div>
                         </div>
