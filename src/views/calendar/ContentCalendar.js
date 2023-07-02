@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
 
 import { faPlus, faUserCircle, fa3 } from "@fortawesome/free-solid-svg-icons";
-import { Button, ProgressBar } from "react-bootstrap";
+import { Button, ProgressBar, OverlayTrigger, Tooltip, Popover } from "react-bootstrap";
 import { updateCloseStatus } from "./taskSlice";
 
 import ExtendedForm from "./extendedForm";
@@ -61,35 +61,136 @@ const ContentCalendar = (props) => {
                                 - {task.description}
                                 <br />
                                 <div className="progress-bar mb-1">
-                                    <ProgressBar>
-                                        <ProgressBar striped variant="success"
-                                            animated
-                                            now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Completed").length / (task.related_user_id.length + 1)} key={1}
-                                            label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Completed").length}/${(task.related_user_id.length + 1) }`}
-                                        />
-                                        <ProgressBar variant="warning"
-                                            animated
-                                            now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Inprogress").length / (task.related_user_id.length + 1)} key={2}
-                                            label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Inprogress").length}/${(task.related_user_id.length + 1)}`}
-                                        />
-                                        <ProgressBar striped variant="danger"
-                                            key={3} animated
-                                            now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Cancelled").length / (task.related_user_id.length + 1)} 
-                                            label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Cancelled").length}/${(task.related_user_id.length + 1)}`}
-                                        />
-                                    </ProgressBar>
-                                </div>
-                                <div style={{ height: '20px' }} className="mt-1">
 
-                                    {task.related_user_id.map((id, idx) => {
-                                        if (idx <= 2)
-                                            return < FontAwesomeIcon icon={faUserCircle} style={{ color: "#216ae8" }} size="xl" key={idx} />
-                                        else if (idx == 3)
-                                            return <div style={{ borderRadius: "50%", display: 'inline-block', border: '1px solid #81868d' }} key={idx}>
-                                                <FontAwesomeIcon icon={fa3} style={{ color: "#0c5fed", }} />
-                                                <FontAwesomeIcon icon={faPlus} style={{ color: "#0e5ddd", }} />
+                                    <OverlayTrigger placement="left" overlay={
+                                        <Popover id="popover-basic" style={{ maxWidth: '500px' }}>
+                                            <Popover.Header as="h3">Completed</Popover.Header>
+                                            <Popover.Body>
+                                                <div>
+                                                    {
+                                                        (totalProgress.filter(pr => pr.user_id === props.userInfo.id && pr.task_id === task.id && pr.workStatus === "Completed").length !== 0
+                                                        ) ? <>Tên :  {props.userInfo.name}  - Email: {props.userInfo.email} </> : null
+                                                    }
+                                                    {props.accounts.map(ac => {
+                                                        if (totalProgress.filter(pr => pr.user_id === ac.id && pr.task_id === task.id && pr.workStatus === "Completed").length !== 0
+                                                            && task.related_user_id.filter(p => p == ac.id).length !== 0)
+                                                            return (<p key={ac.id}>
+                                                                Tên: {ac.name} - Email: {ac.email}
+
+                                                            </p>)
+                                                    }
+                                                    )}
+                                                </div>
+                                            </Popover.Body>
+                                            <Popover.Header as="h3">Cancelled</Popover.Header>
+                                            <Popover.Body>
+                                                <div>
+                                                     {(totalProgress.filter(pr => pr.user_id === props.userInfo.id && pr.task_id === task.id && pr.workStatus === "Cancelled").length !== 0
+                                                    ) ? <>Tên :  {props.userInfo.name}  - Email: {props.userInfo.email} </>:null
+                                                    }
+                                                    {props.accounts.map(ac => {
+
+                                                        if (totalProgress.filter(pr => pr.user_id === ac.id && pr.task_id === task.id && pr.workStatus === "Cancelled").length !== 0 &&
+                                                            task.related_user_id.filter(p => p == ac.id).length !== 0)
+                                                            return (<p key={ac.id}>
+                                                                Tên: {ac.name} - Email: {ac.email}
+
+                                                            </p>)
+                                                    }
+                                                    )}
+                                                </div>
+                                            </Popover.Body>
+
+                                            <Popover.Header as="h3">Inprogress</Popover.Header>
+                                            <Popover.Body>
+
+                                                <div>
+                                                     {(totalProgress.filter(pr => pr.user_id === props.userInfo.id && pr.task_id === task.id && pr.workStatus === "Inprogress").length !== 0
+                                                    ) ? <>Tên :  {props.userInfo.name}  - Email: {props.userInfo.email} </>:null
+                                                    }
+                                                    {props.accounts.map(ac => {
+                                                        if (totalProgress.filter(pr => pr.user_id === ac.id && pr.task_id === task.id && pr.workStatus === "Inprogress").length !== 0 &&
+                                                            task.related_user_id.filter(p => p == ac.id).length !== 0)
+                                                            return (<p key={ac.id}>
+                                                                Tên: {ac.name} - Email: {ac.email}
+
+                                                            </p>)
+                                                    }
+                                                    )}
+                                                </div>
+                                            </Popover.Body>
+
+
+                                        </Popover>
+                                    }>
+
+
+                                        <ProgressBar>
+
+
+
+                                            <ProgressBar striped variant="success"
+                                                animated
+                                                now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Completed").length / (task.related_user_id.length + 1)} key={1}
+                                                label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Completed").length}/${(task.related_user_id.length + 1)}`}
+                                            />
+
+
+
+
+                                            <ProgressBar variant="warning"
+                                                animated
+                                                now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Inprogress").length / (task.related_user_id.length + 1)} key={2}
+                                                label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Inprogress").length}/${(task.related_user_id.length + 1)}`}
+                                            />
+
+
+                                            <ProgressBar striped variant="danger"
+                                                key={3} animated
+                                                now={100 * totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Cancelled").length / (task.related_user_id.length + 1)}
+                                                label={`${totalProgress.filter(p => p.task_id === task.id && p.workStatus === "Cancelled").length}/${(task.related_user_id.length + 1)}`}
+                                            />
+
+
+
+                                        </ProgressBar>
+                                    </OverlayTrigger>
+                                </div>
+                                <OverlayTrigger placement="left" overlay={
+                                    <Popover id="popover-basic" style={{ maxWidth: '500px' }}>
+                                        <Popover.Header as="h3">Member</Popover.Header>
+                                        <Popover.Body>
+                                            <div>
+                                                {props.accounts.map(ac => {
+                                                    if (task.related_user_id.filter(p => p == ac.id).length !== 0)
+                                                        return (<p key={ac.id}>
+                                                            Tên: {ac.name} - Email: {ac.email}
+
+                                                        </p>)
+                                                }
+                                                )}
                                             </div>
-                                    })}</div>
+                                        </Popover.Body>
+                                    </Popover>
+                                }>
+
+                                    <div style={{ height: '20px', cursor: 'pointer' }} className="mt-1">
+
+                                        {task.related_user_id.map((id, idx) => {
+                                            if (idx <= 2)
+                                                return < FontAwesomeIcon icon={faUserCircle} style={{ color: "#216ae8" }} size="xl" key={idx} />
+                                            else if (idx == 3)
+                                                return <div style={{ borderRadius: "50%", display: 'inline-block', border: '1px solid #81868d' }} key={idx}>
+                                                    <FontAwesomeIcon icon={fa3} style={{ color: "#0c5fed", }} />
+                                                    <FontAwesomeIcon icon={faPlus} style={{ color: "#0e5ddd", }} />
+                                                </div>
+                                        })}</div>
+
+                                </OverlayTrigger>
+
+
+
+
                                 {/* {props.userInfo.id === task.user_id ? (task.close  ?
                                     <Button className="close-task-btn" onClick={() => disptach(updateCloseStatus([task.id]))}>Open</Button> :
                                     <Button className="close-task-btn" onClick={() => disptach(updateCloseStatus([task.id]))}>Close</Button>)

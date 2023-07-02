@@ -26,9 +26,11 @@ const CalendarState = (props) => {
         props.selectedDate.getFullYear(), props.userInfo.id
     ))
     const taskProgress = useSelector((state) => getTaskProgress(state, props.userInfo.id))
+
     const completedTask = tasksByDate.filter(t => taskProgress.find(tp => tp.task_id === t.id).workStatus == 'Completed')
     const cancelledTask = tasksByDate.filter(t => taskProgress.find(tp => tp.task_id === t.id).workStatus == 'Cancelled')
     const inprogressTask = tasksByDate.filter(t => taskProgress.find(tp => tp.task_id === t.id).workStatus == 'Inprogress')
+
     const total_workspace = useSelector((state) => getTotalWorkspace(state, props.userInfo.id))
     const [taskRemaining, setTaskRemaining] = useState(null)
     const [workStatus, setWorkStatus] = useState("")
@@ -60,8 +62,8 @@ const CalendarState = (props) => {
 
 
     const handleChangeTaskStatus = (task_id, user_id) => {
-        
-        dispatch(updateWorkStatus([task_id, user_id, workStatus,props.userInfo.name]))
+
+        dispatch(updateWorkStatus([task_id, user_id, workStatus, props.userInfo.name]))
         setTaskRemaining(taskRemaining.filter(w => w.id !== task_id))
         alert("Add successfully")
     }

@@ -167,7 +167,7 @@ const init = {
             "user_id": 6,
             "related_user_id": [4, 5],
             "workspace_id": 9,
-            "title": "Cammping",
+            "title": "Camping",
             "location": "Yen So Park",
             "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
             "done": 3,
@@ -463,7 +463,7 @@ const init = {
         },
         {
             id: 29,
-            user_id: 6,
+            user_id: 4,
             task_id: 10,
             workStatus: "Completed",
         },

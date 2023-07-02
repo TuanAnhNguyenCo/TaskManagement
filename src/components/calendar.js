@@ -122,6 +122,7 @@ const Calendar = (props) => {
                         setModalShow={setModalShow}
                         handleOpenChat={handleOpenChat}
                         setTask={setTask}
+                        
                     /> : null}
                     {isTasks1 ? <CalendarState selectedDate={selectedDate}
                         userInfo={userInfo}
