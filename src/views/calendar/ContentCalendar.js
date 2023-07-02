@@ -128,7 +128,7 @@ const ContentCalendar = (props) => {
                                     }>
 
 
-                                        <ProgressBar>
+                                        <ProgressBar style={{cursor:'pointer'}}>
 
 
 
