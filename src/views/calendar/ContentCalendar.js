@@ -40,6 +40,7 @@ const ContentCalendar = (props) => {
     }
 
 
+
     return (
         <>
             <div className="schedule-list" style={props.modalShow ? myStyle : null}>
@@ -66,10 +67,12 @@ const ContentCalendar = (props) => {
                                         <Popover id="popover-basic" style={{ maxWidth: '500px' }}>
                                             <Popover.Header as="h3">Completed</Popover.Header>
                                             <Popover.Body>
+
                                                 <div>
                                                     {
-                                                        (totalProgress.filter(pr => pr.user_id === props.userInfo.id && pr.task_id === task.id && pr.workStatus === "Completed").length !== 0
-                                                        ) ? <>Tên :  {props.userInfo.name}  - Email: {props.userInfo.email} </> : null
+
+                                                        (totalProgress.filter(pr => pr.user_id === task.user_id && pr.task_id === task.id && pr.workStatus === "Completed").length !== 0
+                                                        ) ? <p> Tên: {props.accounts.find(a => a.id === task.user_id).name} - Email: {props.accounts.find(a => a.id === task.user_id).email}</p> : null
                                                     }
                                                     {props.accounts.map(ac => {
                                                         if (totalProgress.filter(pr => pr.user_id === ac.id && pr.task_id === task.id && pr.workStatus === "Completed").length !== 0
@@ -85,8 +88,8 @@ const ContentCalendar = (props) => {
                                             <Popover.Header as="h3">Cancelled</Popover.Header>
                                             <Popover.Body>
                                                 <div>
-                                                     {(totalProgress.filter(pr => pr.user_id === props.userInfo.id && pr.task_id === task.id && pr.workStatus === "Cancelled").length !== 0
-                                                    ) ? <>Tên :  {props.userInfo.name}  - Email: {props.userInfo.email} </>:null
+                                                    {(totalProgress.filter(pr => pr.user_id === task.user_id && pr.task_id === task.id && pr.workStatus === "Cancelled").length !== 0
+                                                    ) ? <p> Tên: {props.accounts.find(a => a.id === task.user_id).name} - Email: {props.accounts.find(a => a.id === task.user_id).email}</p> : null
                                                     }
                                                     {props.accounts.map(ac => {
 
@@ -105,8 +108,8 @@ const ContentCalendar = (props) => {
                                             <Popover.Body>
 
                                                 <div>
-                                                     {(totalProgress.filter(pr => pr.user_id === props.userInfo.id && pr.task_id === task.id && pr.workStatus === "Inprogress").length !== 0
-                                                    ) ? <>Tên :  {props.userInfo.name}  - Email: {props.userInfo.email} </>:null
+                                                    {(totalProgress.filter(pr => pr.user_id === task.user_id && pr.task_id === task.id && pr.workStatus === "Inprogress").length !== 0
+                                                    ) ? <p> Tên: {props.accounts.find(a => a.id === task.user_id).name} - Email: {props.accounts.find(a => a.id === task.user_id).email}</p> : null
                                                     }
                                                     {props.accounts.map(ac => {
                                                         if (totalProgress.filter(pr => pr.user_id === ac.id && pr.task_id === task.id && pr.workStatus === "Inprogress").length !== 0 &&
@@ -161,6 +164,9 @@ const ContentCalendar = (props) => {
                                         <Popover.Header as="h3">Member</Popover.Header>
                                         <Popover.Body>
                                             <div>
+                                                
+                                                <p> Tên: {props.accounts.find(a => a.id === task.user_id).name} - Email: {props.accounts.find(a => a.id === task.user_id).email}</p>
+                                                
                                                 {props.accounts.map(ac => {
                                                     if (task.related_user_id.filter(p => p == ac.id).length !== 0)
                                                         return (<p key={ac.id}>
