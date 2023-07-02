@@ -38,7 +38,7 @@ const Component11 = (props) => {
                 className="component11-rectangle3"
               />
               <span className="component11-text002">
-                <span>Total Task vs Complated task</span>
+                <span>Total Task vs Completed task</span>
               </span>
               <div className="component11-group22">
                 <div >
@@ -135,7 +135,7 @@ const Component11 = (props) => {
               <div className="component11-complated-task">
                 <div className="component11-group14">
                   <span className="component11-text026">
-                    <span>Complated Task</span>
+                    <span>Completed Task</span>
                   </span>
                   <span className="component11-text028">
                     <span className="component11-text029">+{props.num_of_complated_task_prev == 0 ? props.num_of_complated_task * 100 : 100 * props.num_of_complated_task / props.num_of_complated_task_prev - 100}% Prev Month</span>
@@ -450,7 +450,7 @@ const Component11 = (props) => {
                 </span>
                 <div className="component11-group40">
                   <span className="component11-text087">
-                    <span>Complated task</span>
+                    <span>Completed task</span>
                   </span>
                   <span className="component11-text089">
                     <span>Global</span>
