@@ -17,8 +17,8 @@ const Calendar = (props) => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [isLogin, setIsLogin] = useState(false);
     const [userInfo, setUserInfo] = useState()
-    const [isDashboard1, setIsDashboard] = useState(false)
-    const [isCalendar1, setIsCalendar] = useState(true)
+    const [isDashboard1, setIsDashboard] = useState(true)
+    const [isCalendar1, setIsCalendar] = useState(false)
     const [isTasks1, setIsTasks] = useState(false)
     const [isChat, setIsChat] = useState(false)
     const [modalShow, setModalShow] = useState(false);
