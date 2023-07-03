@@ -199,6 +199,44 @@ const init = {
                 "month": 7,
                 "year": 2023
             }
+        },
+        {
+            "id": 11,
+            "user_id": 6,
+            "related_user_id": [],
+            "workspace_id": 10,
+            "title": "Dạy con học",
+            "location": "Home",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
+            "done": 1,
+            close: true,
+            "workStatus": "Completed",
+            "date": {
+                "start": 35000,
+                "end": 45000,
+                "day": 1,
+                "month": 7,
+                "year": 2023
+            }
+        },
+        {
+            "id": 12,
+            "user_id": 6,
+            "related_user_id": [],
+            "workspace_id": 11,
+            "title": "Lên tài liệu",
+            "location": "Home",
+            "description": "Mô tả hoặc phân công chi tiết sẽ ở đây",
+            "done": 1,
+            close: true,
+            "workStatus": "Completed",
+            "date": {
+                "start": 55000,
+                "end": 75000,
+                "day": 1,
+                "month": 7,
+                "year": 2023
+            }
         }
     ]
 
@@ -248,6 +286,20 @@ const init = {
             user_id: 6,
             related_user_id: [2, 3, 4, 5],
             name: 'Study',
+            checked: true,
+            other_workspace: false,
+        }, {
+            id: 10,
+            user_id: 6,
+            related_user_id: [],
+            name: 'Privacy',
+            checked: true,
+            other_workspace: false,
+        }, {
+            id: 11,
+            user_id: 6,
+            related_user_id: [],
+            name: 'KTPM',
             checked: true,
             other_workspace: false,
         }
@@ -533,6 +585,17 @@ const init = {
             id: 41,
             user_id: 1,
             task_id: 503,
+            workStatus: "Completed",
+        }, {
+            id: 42,
+            user_id: 6,
+            task_id: 11,
+            workStatus: "Completed",
+        }
+        , {
+            id: 43,
+            user_id: 6,
+            task_id: 12,
             workStatus: "Completed",
         }
     ]
