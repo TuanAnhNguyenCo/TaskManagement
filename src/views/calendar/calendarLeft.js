@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import { getMyWorkspace, getOtherWorkspace, updateCheckedWorkspace } from "./taskSlice";
+import { getMyWorkspace, getOtherWorkspace, updateCheckedWorkspace, getTasks } from "./taskSlice";
 import { useSelector, useDispatch } from "react-redux";
 import moment from 'moment';
 
@@ -19,22 +19,32 @@ const CalendarLeft = (props) => {
     const my_workspace = useSelector((state) => getMyWorkspace(state, props.userInfo.id))
     const other_workspace = useSelector((state) => getOtherWorkspace(state, props.userInfo.id))
     const dispatch = useDispatch()
+    const totalTasks = useSelector((state) => getTasks(state, props.userInfo.id))
+    const checkTasks = (day, month, year) => {
+        return totalTasks.filter(t => t.date.day === day && t.date.month === month && t.date.year).length
+    }
     const dateCellRender = (date) => {
-        if (new Date(date).getDate() == props.selectedDate.getDate() &&
-            new Date(date).getMonth() == props.selectedDate.getMonth() &&
-            new Date(date).getFullYear() == props.selectedDate.getFullYear()
+        const day = new Date(date).getDate()
+        const month = new Date(date).getMonth() + 1
+        const year = new Date(date).getFullYear()
+        if (day == props.selectedDate.getDate() &&
+            month == props.selectedDate.getMonth()+1 &&
+            year == props.selectedDate.getFullYear()
         ) {
             return (
                 <div className="ant-picker-cell-inner ant-picker-calendar-date ant-picker-calendar-date-today ant-picker-cell-selected "
                     onClick={() => props.handleDateSelect(date)} style={{ 'backgroundColor': '#0dcaf0' }}>
                     {date.date()}
                 </div>
-
-
             );
         }
 
-        return date.date();
+        return (
+            <div className="day-container " >
+                <div className="day-status" style={checkTasks(day, month, year) === 0 ? { display: "none" } : null}></div>
+                {date.date()}
+            </div>
+        );
     };
 
     const handleCheckedWorkspace = (id) => {

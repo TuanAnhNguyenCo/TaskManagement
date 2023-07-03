@@ -159,40 +159,42 @@ const ContentCalendar = (props) => {
                                         </ProgressBar>
                                     </OverlayTrigger>
                                 </div>
-                                <OverlayTrigger placement="left" overlay={
-                                    <Popover id="popover-basic" style={{ maxWidth: '500px' }}>
-                                        <Popover.Header as="h3">Member</Popover.Header>
-                                        <Popover.Body>
-                                            <div>
+                                {task.related_user_id.length !== 0 ?
+                                    <OverlayTrigger placement="left" overlay={
+                                        <Popover id="popover-basic" style={{ maxWidth: '500px' }}>
+                                            <Popover.Header as="h3">Member</Popover.Header>
+                                            <Popover.Body>
+                                                <div>
                                                 
-                                                <p> Tên: {props.accounts.find(a => a.id === task.user_id).name} - Email: {props.accounts.find(a => a.id === task.user_id).email}</p>
+                                                    <p> Tên: {props.accounts.find(a => a.id === task.user_id).name} - Email: {props.accounts.find(a => a.id === task.user_id).email}</p>
                                                 
-                                                {props.accounts.map(ac => {
-                                                    if (task.related_user_id.filter(p => p == ac.id).length !== 0)
-                                                        return (<p key={ac.id}>
-                                                            Tên: {ac.name} - Email: {ac.email}
+                                                    {props.accounts.map(ac => {
+                                                        if (task.related_user_id.filter(p => p == ac.id).length !== 0)
+                                                            return (<p key={ac.id}>
+                                                                Tên: {ac.name} - Email: {ac.email}
 
-                                                        </p>)
-                                                }
-                                                )}
-                                            </div>
-                                        </Popover.Body>
-                                    </Popover>
-                                }>
-
-                                    <div style={{ height: '20px', cursor: 'pointer' }} className="mt-1">
-
-                                        {task.related_user_id.map((id, idx) => {
-                                            if (idx <= 2)
-                                                return < FontAwesomeIcon icon={faUserCircle} style={{ color: "#216ae8" }} size="xl" key={idx} />
-                                            else if (idx == 3)
-                                                return <div style={{ borderRadius: "50%", display: 'inline-block', border: '1px solid #81868d' }} key={idx}>
-                                                    <FontAwesomeIcon icon={fa3} style={{ color: "#0c5fed", }} />
-                                                    <FontAwesomeIcon icon={faPlus} style={{ color: "#0e5ddd", }} />
+                                                            </p>)
+                                                    }
+                                                    )}
                                                 </div>
-                                        })}</div>
+                                            </Popover.Body>
+                                        </Popover>
+                                    }>
 
-                                </OverlayTrigger>
+                                        <div style={{ height: '20px', cursor: 'pointer' }} className="mt-1">
+
+                                            {task.related_user_id.map((id, idx) => {
+                                                if (idx <= 2)
+                                                    return < FontAwesomeIcon icon={faUserCircle} style={{ color: "#216ae8" }} size="xl" key={idx} />
+                                                else if (idx == 3)
+                                                    return <div style={{ borderRadius: "50%", display: 'inline-block', border: '1px solid #81868d' }} key={idx}>
+                                                        <FontAwesomeIcon icon={fa3} style={{ color: "#0c5fed", }} />
+                                                        <FontAwesomeIcon icon={faPlus} style={{ color: "#0e5ddd", }} />
+                                                    </div>
+                                            })}</div>
+
+                                    </OverlayTrigger>
+                                    : null}
 
 
 

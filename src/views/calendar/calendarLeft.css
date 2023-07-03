@@ -37,3 +37,17 @@
         padding: 10px 0px;
         border-bottom: 1px solid #c6c7c8 ;
 }
+
+.day-container{
+        position: relative;
+}
+
+.day-status{
+        position: absolute;
+        background-color: #3faaed;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        top: -5px;
+        right: 18px;
+}
