@@ -50,7 +50,8 @@ const ContentCalendar = (props) => {
         <>
             <div className="schedule-list" style={props.modalShow ? myStyle : null}>
                 {tasksByDate.map((task) =>
-                    <div className="schedule-inner alert alert-success" key={task.id} style={{backgroundColor:returnColor(task.workspace_id)}}>
+                    <div className="schedule-inner alert alert-success " key={task.id} style={{backgroundColor:returnColor(task.workspace_id)}}>
+                        <span className="author">Created by: {props.accounts.find(a => a.id === task.user_id).name}</span>
                         <div className="schedule-left" >
                             <div className="note"></div>
                             <div className="time">
