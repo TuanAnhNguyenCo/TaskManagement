@@ -78,7 +78,7 @@ const CalendarLeft = (props) => {
                     </div>
                     {my_workspace.map((w) => (
                         !angleUp1 ? (
-                            <div className="calendar-workspace" key={w.id}>
+                            <div className="calendar-workspace" key={w.id} style={{backgroundColor:w.color}}>
                                 <Checkbox style={{ marginLeft: '17px', marginRight: '10px' }}
                                     checked={w.checked} onClick={() => { handleCheckedWorkspace(w.id) }} />
                                 <span>{w.name}</span>
@@ -109,7 +109,7 @@ const CalendarLeft = (props) => {
                     </div>
                     {other_workspace.map((w) => (
                         !angleUp2 ? (
-                            <div className="calendar-workspace" key={w.id}>
+                            <div className="calendar-workspace" key={w.id} style={{ backgroundColor: w.color }}>
                                 <Checkbox style={{ marginLeft: '17px', marginRight: '10px' }}
                                     checked={w.checked} onClick={() => { handleCheckedWorkspace(w.id) }} />
                                 <span>{w.name}</span>

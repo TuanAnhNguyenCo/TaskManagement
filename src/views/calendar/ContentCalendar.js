@@ -1,6 +1,6 @@
 import React from "react";
 import "./calendar.css";
-import { getTasksByDate, getTotalProgress } from "./taskSlice";
+import { getTasksByDate, getTotalProgress, getMyWorkspace, getOtherWorkspace } from "./taskSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,12 +24,17 @@ const ContentCalendar = (props) => {
     };
     const totalProgress = useSelector(getTotalProgress)
     const [modalEmailShow, setEmailModalShow] = useState(false);
-
-
+    const my_workspace = useSelector((state) => getMyWorkspace(state, props.userInfo.id))
+    const other_workspace = useSelector((state) => getOtherWorkspace(state, props.userInfo.id))
     const handleClose = () => props.setModalShow(false);
     const handleEmailShow = () => setEmailModalShow(true);
     const handleEmailClose = () => setEmailModalShow(false);
     const [toggle1, setToggle1] = useState(true)
+
+    const returnColor = (workspace_id)=>{
+        const totalWorkspace = my_workspace.concat(other_workspace)
+        return totalWorkspace.find(w => w.id === workspace_id).color
+    }
 
     const procressTime = (time) => {
 
@@ -45,7 +50,7 @@ const ContentCalendar = (props) => {
         <>
             <div className="schedule-list" style={props.modalShow ? myStyle : null}>
                 {tasksByDate.map((task) =>
-                    <div className="schedule-inner alert alert-success" key={task.id} >
+                    <div className="schedule-inner alert alert-success" key={task.id} style={{backgroundColor:returnColor(task.workspace_id)}}>
                         <div className="schedule-left" >
                             <div className="note"></div>
                             <div className="time">

@@ -249,6 +249,7 @@ const init = {
             name: 'ITSS',
             checked: true,
             other_workspace: false,
+            color: "#22d2c9",
         },
         {
             id: 2,
@@ -257,6 +258,7 @@ const init = {
             name: 'VHKD',
             checked: true,
             other_workspace: false,
+            color: "#22d234",
         },
         {
             id: 3,
@@ -265,6 +267,7 @@ const init = {
             name: 'GR1',
             checked: true,
             other_workspace: false,
+            color: "#60c110",
         }, {
             id: 7,
             user_id: 6,
@@ -272,6 +275,7 @@ const init = {
             name: 'Daily Work',
             checked: true,
             other_workspace: false,
+            color: "rgb(65 235 176)",
         },
         {
             id: 8,
@@ -280,6 +284,7 @@ const init = {
             name: 'Free Time',
             checked: true,
             other_workspace: false,
+            color: "rgb(232 147 214)",
         },
         {
             id: 9,
@@ -288,6 +293,7 @@ const init = {
             name: 'Study',
             checked: true,
             other_workspace: false,
+            color: "#ecbb2c",
         }, {
             id: 10,
             user_id: 6,
@@ -295,6 +301,7 @@ const init = {
             name: 'Privacy',
             checked: true,
             other_workspace: false,
+            color: "rgb(245 217 115 / 51%)",
         }, {
             id: 11,
             user_id: 6,
@@ -302,6 +309,8 @@ const init = {
             name: 'KTPM',
             checked: true,
             other_workspace: false,
+            color: "#52d6f7",
+
         }
 
     ],
@@ -688,6 +697,7 @@ const taskSlice = createSlice({
                         name: workspace,
                         checked: true,
                         other_workspace: false,
+                        color: 'rgb(136 149 251 / 50%)'
                     })
                     console.log(state.workspace);
                 } else {
@@ -764,6 +774,7 @@ const taskSlice = createSlice({
                         name: 'Meeting',
                         checked: true,
                         other_workspace: true,
+                        color: "rgb(251 85 85 / 51%)",
                     })
                     state.workspace.push({
                         id: 5,
@@ -772,6 +783,7 @@ const taskSlice = createSlice({
                         name: 'Wife',
                         checked: true,
                         other_workspace: true,
+                        color: "rgb(8 237 143 / 51%)",
                     })
                     state.workspace.push({
                         id: 6,
@@ -780,6 +792,7 @@ const taskSlice = createSlice({
                         name: 'Friends',
                         checked: true,
                         other_workspace: true,
+                        color: "rgb(240 217 18 / 83%)",
                     })
                     state.tasks.push(
                         {
