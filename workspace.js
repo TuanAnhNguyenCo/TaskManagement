@@ -1,0 +1,73 @@
+[
+    {
+        id: 1,
+        user_id: 1,
+        related_user_id: [],
+        name: 'ITSS',
+        checked: true,
+        other_workspace: false,
+        color: "#22d2c9",
+    },
+    {
+        id: 2,
+        user_id: 1,
+        related_user_id: [],
+        name: 'VHKD',
+        checked: true,
+        other_workspace: false,
+        color: "#22d234",
+    },
+    {
+        id: 3,
+        user_id: 1,
+        related_user_id: [],
+        name: 'GR1',
+        checked: true,
+        other_workspace: false,
+        color: "#60c110",
+    }, {
+        id: 7,
+        user_id: 6,
+        related_user_id: [1, 4, 5],
+        name: 'Daily Work',
+        checked: true,
+        other_workspace: false,
+        color: "rgb(65 235 176)",
+    },
+    {
+        id: 8,
+        user_id: 6,
+        related_user_id: [1, 2, 3, 4, 5],
+        name: 'Free Time',
+        checked: true,
+        other_workspace: false,
+        color: "rgb(232 147 214)",
+    },
+    {
+        id: 9,
+        user_id: 6,
+        related_user_id: [2, 3, 4, 5],
+        name: 'Study',
+        checked: true,
+        other_workspace: false,
+        color: "#ecbb2c",
+    }, {
+        id: 10,
+        user_id: 6,
+        related_user_id: [],
+        name: 'Privacy',
+        checked: true,
+        other_workspace: false,
+        color: "rgb(245 217 115 / 51%)",
+    }, {
+        id: 11,
+        user_id: 6,
+        related_user_id: [],
+        name: 'KTPM',
+        checked: true,
+        other_workspace: false,
+        color: "#52d6f7",
+
+    }
+
+]

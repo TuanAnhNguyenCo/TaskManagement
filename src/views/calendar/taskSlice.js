@@ -17,7 +17,7 @@ const init = {
             "date": {
                 "start": 17000,
                 "end": 21000,
-                "day": 4,
+                "day": 6,
                 "month": 7,
                 "year": 2023
             }
@@ -96,7 +96,7 @@ const init = {
             "date": {
                 "start": 27000,
                 "end": 29000,
-                "day": 4,
+                "day": 6,
                 "month": 7,
                 "year": 2023
             }
@@ -116,7 +116,7 @@ const init = {
             "date": {
                 "start": 30000,
                 "end": 35000,
-                "day": 4,
+                "day": 5,
                 "month": 7,
                 "year": 2023
             }
@@ -136,7 +136,7 @@ const init = {
             "date": {
                 "start": 36000,
                 "end": 40000,
-                "day": 4,
+                "day": 5,
                 "month": 7,
                 "year": 2023
             }

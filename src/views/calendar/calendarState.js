@@ -62,7 +62,6 @@ const CalendarState = (props) => {
 
 
     const handleChangeTaskStatus = (task_id, user_id) => {
-
         dispatch(updateWorkStatus([task_id, user_id, workStatus, props.userInfo.name]))
         setTaskRemaining(taskRemaining.filter(w => w.id !== task_id))
         alert("Add successfully")
