@@ -6,9 +6,10 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
 
-import { faPlus, faUserCircle, fa3 } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faUserCircle, fa3, faClipboard, faExclamation } from "@fortawesome/free-solid-svg-icons";
 import { Button, ProgressBar, OverlayTrigger, Tooltip, Popover } from "react-bootstrap";
 import { updateCloseStatus } from "./taskSlice";
+import AddDetailTask from "../task/addDetailTask";
 
 import ExtendedForm from "./extendedForm";
 import ExtendedForm1 from "./extendedForm1";
@@ -27,11 +28,18 @@ const ContentCalendar = (props) => {
     const my_workspace = useSelector((state) => getMyWorkspace(state, props.userInfo.id))
     const other_workspace = useSelector((state) => getOtherWorkspace(state, props.userInfo.id))
     const handleClose = () => props.setModalShow(false);
-    const handleEmailShow = () => setEmailModalShow(true);
-    const handleEmailClose = () => setEmailModalShow(false);
+    const [show1, setShow1] = useState(false)
+    const handleShowAddDetailTask = (task) => {
+        setTask1(task)
+        setShow1(true)
+    }
+    const getTaskProgress = (task_id, user_id) => {
+        return totalProgress.find(t => t.task_id === task_id && t.user_id === user_id)
+    }
     const [toggle1, setToggle1] = useState(true)
+    const [task1, setTask1] = useState(null)
 
-    const returnColor = (workspace_id)=>{
+    const returnColor = (workspace_id) => {
         const totalWorkspace = my_workspace.concat(other_workspace)
         return totalWorkspace.find(w => w.id === workspace_id).color
     }
@@ -48,12 +56,24 @@ const ContentCalendar = (props) => {
 
     return (
         <>
+            {show1 ?
+
+                <AddDetailTask setShow1={setShow1} show1={show1} {...props} task={task1} />
+                : null}
             <div className="schedule-list" style={props.modalShow ? myStyle : null}>
                 {tasksByDate.map((task) =>
-                    <div className="schedule-inner alert alert-success " key={task.id} style={{backgroundColor:returnColor(task.workspace_id)}}>
+                    <div className="schedule-inner alert alert-success " key={task.id} style={{ backgroundColor: returnColor(task.workspace_id) }}>
                         <span className="author">Created by: {props.accounts.find(a => a.id === task.user_id).name}</span>
                         <div className="schedule-left" >
-                            <div className="note"></div>
+                            {task.user_id === props.userInfo.id ?
+                                <div className="note">
+                                    <FontAwesomeIcon icon={faClipboard} style={{ width: '25px', height: '25px', cursor: 'pointer' }}
+                                        onClick={() => {
+                                            handleShowAddDetailTask(task)
+                                        }} />
+                                    <FontAwesomeIcon icon={faExclamation} bounce style={{ color: "#e13623", }} className="note-qs" />
+                                </div>
+                                : null}
                             <div className="time">
                                 <span>{procressTime(task.date.start)}</span>
                                 <span>|</span>
@@ -61,11 +81,13 @@ const ContentCalendar = (props) => {
 
                             </div>
                             <div className="content">
-                                - {task.title}
+                                Title: {task.title}
                                 <br />
-                                - {task.location}
+                                Location: {task.location}
                                 <br />
-                                - {task.description}
+                                Task: {getTaskProgress(task.id, props.userInfo.id).text === ""
+                                    ? "Bạn chưa được phân cụ thể nhiệm vụ vui lòng liên lạc với " + props.accounts.find(a => a.id === task.user_id).name
+                                    + " để nhận được chi tiết về công việc của mình" : getTaskProgress(task.id, props.userInfo.id).text}
                                 <br />
                                 <div className="progress-bar mb-1">
 
@@ -134,7 +156,7 @@ const ContentCalendar = (props) => {
                                     }>
 
 
-                                        <ProgressBar style={{cursor:'pointer'}}>
+                                        <ProgressBar style={{ cursor: 'pointer' }}>
 
 
 
@@ -171,9 +193,9 @@ const ContentCalendar = (props) => {
                                             <Popover.Header as="h3">Member</Popover.Header>
                                             <Popover.Body>
                                                 <div>
-                                                
+
                                                     <p> Tên: {props.accounts.find(a => a.id === task.user_id).name} - Email: {props.accounts.find(a => a.id === task.user_id).email}</p>
-                                                
+
                                                     {props.accounts.map(ac => {
                                                         if (task.related_user_id.filter(p => p == ac.id).length !== 0)
                                                             return (<p key={ac.id}>

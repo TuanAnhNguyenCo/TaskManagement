@@ -76,7 +76,7 @@ const CalendarLeft = (props) => {
 
                         </Button>
                     </div>
-                    <div style={{ height: '135px', overflow: 'scroll' }}>
+                    <div style={{ maxHeight: '135px', overflow: 'scroll' }}>
                         {my_workspace.map((w) => (
                             !angleUp1 ? (
                                 <div className="calendar-workspace" key={w.id} style={{ backgroundColor: w.color }}>
@@ -110,7 +110,7 @@ const CalendarLeft = (props) => {
 
                         </Button>
                     </div>
-                    <div style={{ height: '135px', overflow: 'scroll' }}>
+                    <div style={{ maxHeight: '135px', overflow: 'scroll' }}>
 
                         {other_workspace.map((w) => (
                             !angleUp2 ? (

@@ -79,8 +79,8 @@
 .schedule-left .note{
     width: 1.1rem;
     height: 1.1rem;
-    background-color: red;
-    border-radius: 100%;
+    /* background-color: red;
+    border-radius: 100%; */
     margin: auto;
 }
 .schedule-left .time{
@@ -181,9 +181,15 @@
 .schedule-left .note {
     width: 1.1rem;
     height: 1.1rem;
-    background-color: red;
-    border-radius: 100%;
+    /* background-color: red;
+    border-radius: 100%; */
+    position: relative;
     margin: auto;
+}
+.note-qs{
+    position: absolute;
+    top: -9px;
+    right: -9px;
 }
 
 .schedule-left .time {
@@ -303,3 +309,4 @@
     top: 8px;
     right: 5px;
 }
+

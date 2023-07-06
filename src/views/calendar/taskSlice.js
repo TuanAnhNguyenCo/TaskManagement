@@ -360,254 +360,254 @@ const init = {
             id: 1,
             user_id: 6,
             task_id: 1,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 2,
             user_id: 4,
             task_id: 1,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 3,
             user_id: 6,
             task_id: 2,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 4,
             user_id: 3,
             task_id: 2,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 5,
             user_id: 4,
             task_id: 2,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 6,
             user_id: 6,
             task_id: 3,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 7,
             user_id: 1,
             task_id: 3,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }, {
             id: 8,
             user_id: 4,
             task_id: 3,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 9,
             user_id: 6,
             task_id: 4,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 10,
             user_id: 1,
             task_id: 4,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 11,
             user_id: 5,
             task_id: 4,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 12,
             user_id: 6,
             task_id: 5,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 13,
             user_id: 2,
             task_id: 5,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 14,
             user_id: 5,
             task_id: 5,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 15,
             user_id: 6,
             task_id: 6,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 16,
             user_id: 2,
             task_id: 6,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 17,
             user_id: 5,
             task_id: 6,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 18,
             user_id: 6,
             task_id: 7,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 19,
             user_id: 2,
             task_id: 7,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 20,
             user_id: 5,
             task_id: 7,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 21,
             user_id: 6,
             task_id: 8,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 22,
             user_id: 3,
             task_id: 8,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }, {
             id: 23,
             user_id: 5,
             task_id: 8,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 24,
             user_id: 6,
             task_id: 9,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 25,
             user_id: 4,
             task_id: 9,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 26,
             user_id: 5,
             task_id: 9,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 27,
             user_id: 6,
             task_id: 10,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 28,
             user_id: 2,
             task_id: 10,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 29,
             user_id: 4,
             task_id: 10,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 30,
             user_id: 6,
             task_id: 501,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 31,
             user_id: 6,
             task_id: 502,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 32,
             user_id: 6,
             task_id: 503,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 33,
             user_id: 1,
             task_id: 501,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 34,
             user_id: 2,
             task_id: 501,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 35,
             user_id: 3,
             task_id: 501,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 36,
             user_id: 4,
             task_id: 501,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         },
         {
             id: 37,
             user_id: 5,
             task_id: 501,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }, {
             id: 38,
             user_id: 1,
             task_id: 502,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }, {
             id: 39,
             user_id: 3,
             task_id: 502,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }, {
             id: 40,
             user_id: 1,
             task_id: 503,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }, {
             id: 41,
             user_id: 1,
             task_id: 503,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }, {
             id: 42,
             user_id: 6,
             task_id: 11,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }
         , {
             id: 43,
             user_id: 6,
             task_id: 12,
-            workStatus: "Completed",
+            workStatus: "Completed", text: ""
         }
-    ]
+    ],
 }
 const createTaskProgress = (id, user_id, task_id) => {
     return {
@@ -615,6 +615,7 @@ const createTaskProgress = (id, user_id, task_id) => {
         user_id: user_id,
         task_id: task_id,
         workStatus: "Inprogress",
+        text: ""
     }
 }
 
@@ -873,6 +874,14 @@ const taskSlice = createSlice({
                 const task = state.tasks.find(t => t.id === task_id)
                 task.close = !task.close
             })
+            .addCase(addOrUpdateDetailTask.fulfilled, (state, action) => {
+                const [user_id, task_id, text] = action.payload
+                const taskProgress = state.taskProgress.filter(d => d.task_id == task_id && d.user_id == user_id)
+                if (taskProgress.length > 0) {
+                    taskProgress[0].text = text
+                }
+
+            })
 
     }
 }
@@ -903,6 +912,12 @@ export const addMess = createAsyncThunk('mess/add', async (data, { state }) => {
 export const updateCloseStatus = createAsyncThunk('task/updateClose', async (data, { state }) => {
     return data;
 });
+
+export const addOrUpdateDetailTask = createAsyncThunk('detailTask/add', async (data, { state }) => {
+    return data;
+});
+
+
 
 
 
@@ -1018,6 +1033,11 @@ export const getTaskProgress = (state, user_id) => {
 }
 export const getTotalProgress = (state) => {
     return state.tasks.taskProgress
+}
+export const getDetailTaskText = (state, user_id, task_id) => {
+    const task = state.tasks.taskProgress.filter(t => t.user_id === user_id && t.task_id === task_id)
+    if (task.length > 0) return task[0].text
+    else return ""
 }
 
 
