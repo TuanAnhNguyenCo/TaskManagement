@@ -45,7 +45,7 @@ const ExtendedForm1 = (props) => {
     const handleFindTask = (e) => {
         const ti = e.target.value
         if (ti !== "")
-            setTitleList(tasks.filter(t => t.title.indexOf(ti) !== -1))
+            setTitleList(tasks.filter(t => t.title.indexOf(ti) !== -1 && props.userInfo.id === t.user_id))
         else
             setTitleList([])
         setTitle(ti)
