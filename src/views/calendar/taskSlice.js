@@ -17,7 +17,7 @@ const init = {
             "date": {
                 "start": 17000,
                 "end": 21000,
-                "day": 6,
+                "day": 11,
                 "month": 7,
                 "year": 2023
             }
@@ -36,7 +36,7 @@ const init = {
             "date": {
                 "start": 18000,
                 "end": 23000,
-                "day": 3,
+                "day": 9,
                 "month": 7,
                 "year": 2023
             }
@@ -56,7 +56,7 @@ const init = {
             "date": {
                 "start": 23000,
                 "end": 40000,
-                "day": 3,
+                "day": 9,
                 "month": 7,
                 "year": 2023
             }
@@ -76,7 +76,7 @@ const init = {
             "date": {
                 "start": 42000,
                 "end": 50000,
-                "day": 3,
+                "day": 9,
                 "month": 7,
                 "year": 2023
             }
@@ -96,7 +96,7 @@ const init = {
             "date": {
                 "start": 27000,
                 "end": 29000,
-                "day": 6,
+                "day": 11,
                 "month": 7,
                 "year": 2023
             }
@@ -116,7 +116,7 @@ const init = {
             "date": {
                 "start": 30000,
                 "end": 35000,
-                "day": 5,
+                "day": 10,
                 "month": 7,
                 "year": 2023
             }
@@ -136,7 +136,7 @@ const init = {
             "date": {
                 "start": 36000,
                 "end": 40000,
-                "day": 5,
+                "day": 10,
                 "month": 7,
                 "year": 2023
             }
@@ -156,7 +156,7 @@ const init = {
             "date": {
                 "start": 41000,
                 "end": 47000,
-                "day": 4,
+                "day": 9,
                 "month": 7,
                 "year": 2023
             }
@@ -176,7 +176,7 @@ const init = {
             "date": {
                 "start": 50000,
                 "end": 60000,
-                "day": 4,
+                "day": 9,
                 "month": 7,
                 "year": 2023
             }
@@ -195,7 +195,7 @@ const init = {
             "date": {
                 "start": 65000,
                 "end": 75000,
-                "day": 4,
+                "day": 9,
                 "month": 7,
                 "year": 2023
             }
@@ -214,7 +214,7 @@ const init = {
             "date": {
                 "start": 35000,
                 "end": 45000,
-                "day": 1,
+                "day": 7,
                 "month": 7,
                 "year": 2023
             }
@@ -233,7 +233,7 @@ const init = {
             "date": {
                 "start": 55000,
                 "end": 75000,
-                "day": 1,
+                "day": 7,
                 "month": 7,
                 "year": 2023
             }
@@ -349,7 +349,7 @@ const init = {
             text: "Chào bạn đây chỉ là dữ liệu demo",
             "date": {
                 "start": 17000,
-                "day": 34,
+                "day": 94,
                 "month": 7,
                 "year": 2023
             }
@@ -808,7 +808,7 @@ const taskSlice = createSlice({
                             "date": {
                                 "start": 30000,
                                 "end": 35155,
-                                "day": 2,
+                                "day": 8,
                                 "month": 7,
                                 "year": 2023
                             }
@@ -826,7 +826,7 @@ const taskSlice = createSlice({
                         "date": {
                             "start": 36000,
                             "end": 45000,
-                            "day": 2,
+                            "day": 8,
                             "month": 7,
                             "year": 2023
                         }
@@ -846,7 +846,7 @@ const taskSlice = createSlice({
                         "date": {
                             "start": 55000,
                             "end": 65000,
-                            "day": 2,
+                            "day": 8,
                             "month": 7,
                             "year": 2023
                         }
